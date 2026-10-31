@@ -1,15 +1,40 @@
 body{
-    padding: 0px;
-    margin: 0px;
+    background-color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
+
 }
-nav{
-    background-color: green;
+.contact {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+    color: blueviolet;
+}
+label{
+    display: block;
+    margin: 15px;
+
+}
+input,textarea {
+    width: 100%;
     padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
 }
-ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+
+button {
+   width: 100%;
+   padding: 10px;
+   margin-top: 20px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: purple;
 }

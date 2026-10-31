@@ -3,58 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discriptive list</title>
-    <style>
-     
-    body {
-            font-family: Arial, sans-serif;
-            background-color: lightyellow;
-            margin: 30px;
-        }
-
-        h1 {
-            color: darkblue;
-            text-align: center;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 3px gray;
-        }
-
-        dl {
-            background-color: white;
-            border: 2px solid navy;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        dt {
-            color: red;
-            font-size: 22px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        dd {
-            color: darkgreen;
-            font-size: 16px;
-            margin-bottom: 20px;
-       
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
+    <title>contact form</title>
 </head>
 <body>
-    <h1>Web Development</h1>
+    <div class="contact">
+        <h2>Contact us</h2>
 
-   <dl>
-    <dt>HTML</dt>
-    <dd>HTML are used for creating structure for web page</dd>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"
+            placeholder="Enter the name">
 
-    <dt>CSS</dt>
-    <dd>CSS is used for creating style & design for webpage</dd>
+            <label for="emai">Email</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter your email">
 
-    <dt>Java script</dt>
-    <dd> Java script used for instation with users</dd>
-   </dl>
+             <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter phone number">
+                   
+            <label for="Subject">subject</label>
+            <input type="text" id="Subject" name="Subject"
+            placeholder="Enter the Subject">
 
+            <button type="submit">submit</button>
+
+        </form>
+    </div>
+ 
+    
 </body>
 </html>
