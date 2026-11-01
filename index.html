@@ -1,37 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>contact form</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Layout</title>
+   <style>
+      body {
+         background-color: #238a6b;
+         display: grid;
+         grid-template-areas:
+        "header header"
+        "article1 article2";
+         grid-template-rows: 10% 1fr;
+         grid-template-columns: 50% 50%;
+         height: 100vh;
+         }
+       header {
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        padding: 0 20%;
+        color: white;
+    }
+
+    #title {
+        margin-right: auto;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    #btn {
+        background-color: #087957;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 12px;
+    }
+
+    #article1 {
+        grid-area: article1;
+        color: white;
+        padding: 30px 0 0 22%;
+    }
+
+    #article1 h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    #article1 button {
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+    }
+
+    #article2 {
+        grid-area: article2;
+        background-color: white;
+        color: black;
+        width: 300px;
+        height: 350px;
+        padding: 30px 30px;
+        margin-top: 60px;
+    }
+
+    #article2 h2 {
+        text-align: center;
+    }
+
+    #for{
+      text-align: center;
+    }
+
+    #loanForm select {
+        width: 100%;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    #apply {
+        width: 100%;
+        padding: 12px;
+        background-color: black;
+        color: white;
+    }
+
+    #low {
+        text-align: center;
+        font-size: 15px;
+        color: grey;
+    }
+      </style>
 </head>
+
 <body>
-    <div class="contact">
-        <h2>Contact us</h2>
+    <header>
+    <div id="title"><h2><b>EasyLo.</b></h2></div>
 
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name"
-            placeholder="Enter the name">
+    <nav id="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <button id="btn">Apply For Loan</button>
+    </nav>
+</header>
+      <br><br>
 
-            <label for="emai">Email</label>
-            <input type="email" id="email" name="email"
-            placeholder="Enter your email">
+    <article id="article1">
+    <h1>The Simple<br>Online Home<br>Loan.</h1>
 
-             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone"
-                   placeholder="Enter phone number">
-                   
-            <label for="Subject">subject</label>
-            <input type="text" id="Subject" name="Subject"
-            placeholder="Enter the Subject">
+    <p>Financial uncertainty is hard on<br>
+       employees, and causes even.</p>
 
-            <button type="submit">submit</button>
+    <br>
+    <button><b>Our services</b></button>
+</article>
 
-        </form>
-    </div>
- 
-    
+<div id="article2">
+    <h2>How much you want?</h2>
+    <p id="for">We provide online instant cash loans.</p>
+
+    <form id="loanForm">
+        <label for="amount">AMOUNT YOU WANT</label>
+        <select id="amount">
+            <option>Select Amount</option>
+            <option>1000</option>
+            <option>2000</option>
+            <option>3000</option>
+        </select>
+
+        <br><br>
+
+        <label for="months">MONTHS</label>
+        <select id="months">
+            <option>Select</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+
+        <p>YOU HAVE TO PAY: <b>₹0</b></p>
+
+        <br>
+        <button id="apply"><b>APPLY NOW</b></button>
+
+        <p id="low">
+            Example rate 6.8% APR. Your rate depends on your application.
+        </p>
+    </form>
+</div>
+
 </body>
+
 </html>
