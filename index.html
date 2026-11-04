@@ -1,177 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Layout</title>
-   <style>
-      body {
-         background-color: #238a6b;
-         display: grid;
-         grid-template-areas:
-        "header header"
-        "article1 article2";
-         grid-template-rows: 10% 1fr;
-         grid-template-columns: 50% 50%;
-         height: 100vh;
-         }
-       header {
-        grid-area: header;
-        display: flex;
-        align-items: center;
-        padding: 0 20%;
-        color: white;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Course</title>
 
-    #title {
-        margin-right: auto;
-    }
-
-    #navbar {
-        display: flex;
-        align-items: center;
-        gap: 60px;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 12px;
-    }
-
-    #btn {
-        background-color: #087957;
-        color: white;
-        border: none;
-        padding: 15px 25px;
-        font-size: 12px;
-    }
-
-    #article1 {
-        grid-area: article1;
-        color: white;
-        padding: 30px 0 0 22%;
-    }
-
-    #article1 h1 {
-        font-size: 42px;
-        margin-bottom: 20px;
-    }
-
-    #article1 button {
-        color: black;
-        border: 2px solid black;
-        padding: 10px 20px;
-    }
-
-    #article2 {
-        grid-area: article2;
-        background-color: white;
-        color: black;
-        width: 300px;
-        height: 350px;
-        padding: 30px 30px;
-        margin-top: 60px;
-    }
-
-    #article2 h2 {
-        text-align: center;
-    }
-
-    #for{
-      text-align: center;
-    }
-
-    #loanForm select {
-        width: 100%;
-        background-color: white;
-        border: 1px solid black;
-    }
-
-    #apply {
-        width: 100%;
-        padding: 12px;
-        background-color: black;
-        color: white;
-    }
-
-    #low {
-        text-align: center;
-        font-size: 15px;
-        color: grey;
-    }
-      </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <header>
-    <div id="title"><h2><b>EasyLo.</b></h2></div>
+        <nav class="navbar"> 
 
-    <nav id="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-        <button id="btn">Apply For Loan</button>
-    </nav>
-</header>
-      <br><br>
+            <h2 class="logo">✿ Good Course</h2>
 
-    <article id="article1">
-    <h1>The Simple<br>Online Home<br>Loan.</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Offer</a></li>
+                <li><a href="#">Template</a></li>
+            </ul>
 
-    <p>Financial uncertainty is hard on<br>
-       employees, and causes even.</p>
+            <div class="nav-buttons">
+                <button class="buy-btn">Buy Template - $29</button>
+                <button class="cart-btn">Cart 🛒</button>
+            </div>
 
-    <br>
-    <button><b>Our services</b></button>
-</article>
+        </nav>
+    </header>
 
-<div id="article2">
-    <h2>How much you want?</h2>
-    <p id="for">We provide online instant cash loans.</p>
 
-    <form id="loanForm">
-        <label for="amount">AMOUNT YOU WANT</label>
-        <select id="amount">
-            <option>Select Amount</option>
-            <option>1000</option>
-            <option>2000</option>
-            <option>3000</option>
-        </select>
+    <!-- Hero Section -->
+    <section class="hero">
 
-        <br><br>
+        <div class="hero-content">
 
-        <label for="months">MONTHS</label>
-        <select id="months">
-            <option>Select</option>
-            <option>January</option>
-            <option>February</option>
-            <option>March</option>
-            <option>April</option>
-            <option>May</option>
-            <option>June</option>
-            <option>July</option>
-            <option>August</option>
-            <option>September</option>
-            <option>October</option>
-            <option>November</option>
-            <option>December</option>
-        </select>
+            <h1>
+                Unlock skills.<br>
+                Create new life.
+            </h1>
 
-        <p>YOU HAVE TO PAY: <b>₹0</b></p>
+            <p>
+                Good Course offers professional tech
+                courses from the leading teachers in
+                their industries.
+            </p>
 
-        <br>
-        <button id="apply"><b>APPLY NOW</b></button>
+            <div class="hero-bottom">
+                <button class="explore-btn">Explore courses</button>
 
-        <p id="low">
-            Example rate 6.8% APR. Your rate depends on your application.
-        </p>
-    </form>
-</div>
+                <span class="students">
+                    👥 Trusted by 10,000 students
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=700"
+                alt="Student learning online"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+
+        <h2>Undeniable quality in every course</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <span class="icon">♧</span>
+                <h3>Trusted by thousands</h3>
+                <p>
+                    Discover in-depth, professional
+                    courses created by experts.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <span class="icon">♧</span>
+                <h3>Certificate awarded</h3>
+                <p>
+                    Receive certificates after
+                    completing your courses.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <span class="icon">✓</span>
+                <h3>Made by professionals</h3>
+                <p>
+                    Learn from experienced
+                    professionals in your industry.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <span class="icon">↓</span>
+                <h3>Available offline</h3>
+                <p>
+                    Download courses and learn
+                    whenever you want.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <span class="icon">◷</span>
+                <h3>400+ hours of classes</h3>
+                <p>
+                    Access hundreds of hours of
+                    valuable learning content.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <span class="icon">☏</span>
+                <h3>Chat online</h3>
+                <p>
+                    Get support and communicate
+                    with instructors online.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
-
 </html>
