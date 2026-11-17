@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Bootstrap Card</title>
+    <title>Email validation</title>
 </head>
 <body>
-    <div class="card m-5" style="width: 18rem;">
-        <img src="https://plus.unsplash.com/premium_photo-19725687221-6fe12c2da6b1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
+    <h2>Registration Form</h2>
 
-     <div class="card-body">
-            <h5 class="card-title">lion</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt doloremque obcaecati asperiores.</p>
-            <a href="#" class="btn btn-primary">Feed Now</a>
-        </div>
-    </div>
+    <form name="myform" onsubmit="return validateform()">        
+    <input type="text" name="email" placeholder="Enter your email()">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <br><br>
+
+        <input type="submit" value="Registration">
+
+    </form>
+    <script>
+
+        function validateform(){
+
+            let email=document.myform.email.value.trim();
+
+            if (email==""){
+                alert("Email cannot be empty")
+                document.myform.email.focus()
+                return false
+            }
+let pattern= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+if(!pattern.test(email)){
+    alert("Enter a vaild email addresss" )
+    document.myform.email.focus()
+    return false;
+}
+alert("Email validation is successful")
+return true
+
+        }
+    </script>
 </body>
 </html>
