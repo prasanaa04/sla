@@ -1,61 +1,63 @@
-// 1,Check whether a number is divisible by 3 and 5
+// Write a function addNumbers(a, b) that accepts two numbers and returns their sum.
 
-let num=15;
-
-if(num%3==0 && num%5==0){
-    console.log("It is divisible by 3 and 5")
-}
-else{
-    console.log("It is not divisible by 3 and 5")
-
+function addNumbers(a, b) {
+    return a + b;
 }
 
-// 2,Check whether a student passed in either subject
+let result = addNumbers(10, 20);
 
-// let maths=35
-// let science=20
+console.log(result);
 
-let maths=35;
-let science=20;
-if(maths>=55 || science>=10){
-    console.log("STUDENT ARE PASSED")
-}
-else{
-    ("STUDENT ARE FAILED")
-}
+// Write a function checkEvenOdd(num) that checks whether a given number is even or odd.
 
-// 3,Login validation:
-
-let username='admin'
-
-let password='12345'
-
-if("username==admin && password==12345"){
-   console.log ("Login is successfull")
-}
-else{
-    console.log("Login is unsuccesfull")
+function checkEvenOdd(num) {
+    if (num % 2 === 0) {
+        return "Even Number";
+    }
+    else {
+        return "Odd Number";
+    }
 }
 
-// 4,Check whether a username is either "admin" or "manager".
+console.log(checkEvenOdd(7));
 
-let user='admin'
+// Write a function findLargest(a, b, c) that accepts three numbers and returns the largest number.
 
-if('user==admin || user==manager'){
-    console.log("Access is granted")
-}
-else{
-    ("access is denaied")
-}
-
-// 5,Check whether a person is eligible for a senior citizen discount (age 60 or above).
-
-let age = 65;
-
-if (age >= 60) {
-    console.log("Eligible for senior citizen discount");
-}
-else {
-    console.log("Not eligible for discount");
+function findLargest(a, b, c) {
+    if (a >= b && a >= c) {
+        return a;
+    }
+    else if (b >= a && b >= c) {
+        return b;
+    }
+    else {
+        return c;
+    }
 }
 
+console.log(findLargest(10, 50, 30));
+
+
+
+
+// Write a function factorial(num) that calculates the factorial of a given number.
+
+function factorial(num) {
+    let fact = 1;
+
+    for (let i = 1; i <= num; i++) {
+        fact = fact * i;
+    }
+
+    return fact;
+}
+
+console.log(factorial(5));
+
+// Write a function that reverses a given string.
+
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+console.log(reverseString("hello"));
